@@ -1,0 +1,13 @@
+.Track {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.Track-information {
+    flex: 1;
+}
+
+.Track-action {
+    margin-left: 10px;
+}
