@@ -2,16 +2,11 @@ import React from 'react';
 import Track from '../Track/Track';
 import './Tracklist.module.css';
 
-function Tracklist() {
-    const tracks = [
-        { id: 1, name: 'Song 1', artist: 'Artist 1', album: 'Album 1'},
-        { id: 2, name: 'Song 2', artist: 'Artist 2', album: 'Album 2'}
-    ];
-
+function Tracklist({ tracks = [], onAdd, onRemove, isRemoval }) {
     return (
         <div className='Tracklist'>
             {tracks.map(track => (
-                <Track key={track.id} track={track} />
+                <Track key={track.id} track={track} onAdd={onAdd} onRemove={onRemove} isRemoval={isRemoval} />
             ))}
         </div>
     );
